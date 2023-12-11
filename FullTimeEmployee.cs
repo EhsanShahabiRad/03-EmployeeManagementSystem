@@ -20,13 +20,7 @@ namespace EmployeeManagementSystem
             Experience = experience;
         }
 
-
-        public decimal CalculateSalary()
-        {
-            
-            decimal salary = (180* SalaryPerHour) * (1+ Experience / 100);
-            return salary;
-        }
+       
 
         public void DisplayDetails()
         {
@@ -36,5 +30,16 @@ namespace EmployeeManagementSystem
             Console.WriteLine($"SalaryPerHour: {SalaryPerHour}");
             Console.WriteLine($"Total Salary ......");
         }
+
+        public decimal CalculateSalary()
+        {
+            decimal salary = (90 * SalaryPerHour) * (1 + Experience / 100);
+            return salary;
+        }
+
+       
+     
+
+       
     }
 }

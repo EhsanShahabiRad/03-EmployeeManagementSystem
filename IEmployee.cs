@@ -8,14 +8,17 @@ namespace EmployeeManagementSystem
 {
     public interface IEmployee
     {
+       
         public string Name { get; set; }
         public decimal SalaryPerHour { get; set; }
         public int Experience { get; set; }
 
-       
 
         decimal CalculateSalary();
+       
         void DisplayDetails();
+
+        
         
         
     }
