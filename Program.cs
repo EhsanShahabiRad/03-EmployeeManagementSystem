@@ -5,13 +5,16 @@ namespace EmployeeManagementSystem
     {
         static void Main(string[] args)
         {
+            XmlGenerator xmlGenerator = new XmlGenerator();
+           
+
 
             List<IEmployee> employees = new List<IEmployee>();
             employees.Add(new FullTimeEmployee("Reza", 25, 15));
             employees.Add(new FullTimeEmployee("Kaveh", 12, 3));
             employees.Add(new PartTimeEmployee("Ehsan", 15, 2));
             employees.Add(new PartTimeEmployee("Eshghe Kaveh", 9, 1));
-
+            xmlGenerator.GenerateXML(employees);
 
 
             ReportEmployee reporter = new ReportEmployee();

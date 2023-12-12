@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Employees>
+  <Employee>
+    <NAme>Reza</NAme>
+    <SalaryPerHour>25</SalaryPerHour>
+    <Type>1</Type>
+    <Experience>15</Experience>
+  </Employee>
+  <Employee>
+    <NAme>Kaveh</NAme>
+    <SalaryPerHour>12</SalaryPerHour>
+    <Type>1</Type>
+    <Experience>3</Experience>
+  </Employee>
+  <Employee>
+    <NAme>Ehsan</NAme>
+    <SalaryPerHour>15</SalaryPerHour>
+    <Type>2</Type>
+    <Experience>2</Experience>
+  </Employee>
+  <Employee>
+    <NAme>Eshghe Kaveh</NAme>
+    <SalaryPerHour>9</SalaryPerHour>
+    <Type>2</Type>
+    <Experience>1</Experience>
+  </Employee>
+</Employees>

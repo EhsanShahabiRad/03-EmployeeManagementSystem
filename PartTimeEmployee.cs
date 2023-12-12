@@ -11,13 +11,14 @@ namespace EmployeeManagementSystem
         public string Name { get; set; }
         public decimal SalaryPerHour { get; set; }
         public int Experience { get; set; }
-
+        public int Type { get; set; }
 
         public PartTimeEmployee(string name, decimal salaryPerHour, int experience)
         {
             Name = name;
             SalaryPerHour = salaryPerHour;
             Experience = experience;
+            Type = 2;
         }
 
 

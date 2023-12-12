@@ -12,7 +12,7 @@ namespace EmployeeManagementSystem
         public string Name { get; set; }
         public decimal SalaryPerHour { get; set; }
         public int Experience { get; set; }
-
+        public int Type { get; set; }
 
         decimal CalculateSalary();
        
