@@ -15,7 +15,8 @@ namespace EmployeeManagementSystem
 
             foreach (var item in result)
             {
-                Console.WriteLine($"Name:{item.Name}   SalaryPerHour:{item.SalaryPerHour}   Experience:{item.Experience}");
+                Console.WriteLine($"Name: {item.Name}   SalaryPerHour: {item.SalaryPerHour}   Experience: {item.Experience}  Type: {(item.Type == 1 ? "FullTime" : "PartTime")}");
+
             }
         }
 
@@ -26,7 +27,7 @@ namespace EmployeeManagementSystem
 
             foreach (var item in result)
             {
-                Console.WriteLine($"Name:{item.Name}   SalaryPerHour:{item.SalaryPerHour}   Experience:{item.Experience}");
+                Console.WriteLine($"Name: {item.Name}   SalaryPerHour: {item.SalaryPerHour}   Experience: {item.Experience}  Type: {(item.Type == 1 ? "FullTime" : "PartTime")}");
             }
         }
 
@@ -37,8 +38,8 @@ namespace EmployeeManagementSystem
             Console.WriteLine($"Above {value}:");
             foreach (var item in result)
             {
-                
-                Console.WriteLine($"Name:{item.Name}   SalaryPerHour:{item.SalaryPerHour}   Experience:{item.Experience}");
+
+                Console.WriteLine($"Name: {item.Name}   SalaryPerHour: {item.SalaryPerHour}   Experience: {item.Experience}  Type: {(item.Type == 1 ? "FullTime" : "PartTime")}");
             }
         }
 
@@ -51,7 +52,7 @@ namespace EmployeeManagementSystem
             foreach (var item in result)
             {
 
-                Console.WriteLine($"Name:{item.Name}   SalaryPerHour:{item.SalaryPerHour}   Experience:{item.Experience}");
+                Console.WriteLine($"Name: {item.Name}   SalaryPerHour: {item.SalaryPerHour}   Experience: {item.Experience}  Type: {(item.Type == 1 ? "FullTime" : "PartTime")}");
             }
         }
 
