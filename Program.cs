@@ -5,17 +5,12 @@ namespace EmployeeManagementSystem
     {
         static void Main(string[] args)
         {
-            XmlGenerator xmlGenerator = new XmlGenerator();
+            XmlManager xmlManager = new XmlManager();
+            xmlManager.GenerateXML();
+         
+
+            List<IEmployee> employees = xmlManager.RetrieveEmployeeFromXML();
            
-
-
-            List<IEmployee> employees = new List<IEmployee>();
-            employees.Add(new FullTimeEmployee("Reza", 25, 15));
-            employees.Add(new FullTimeEmployee("Kaveh", 12, 3));
-            employees.Add(new PartTimeEmployee("Ehsan", 15, 2));
-            employees.Add(new PartTimeEmployee("Eshghe Kaveh", 9, 1));
-            xmlGenerator.GenerateXML(employees);
-
 
             ReportEmployee reporter = new ReportEmployee();
 
@@ -34,11 +29,15 @@ namespace EmployeeManagementSystem
 
 
             MessageService messageService = new MessageService();
-            EmployeeEditor employeeEditor = new EmployeeEditor();
+          
             var EmployeeToEdit = employees[1];
+
+            xmlManager.EmployeeEdited += messageService.onEmployeeEdited;
+            xmlManager.UpdateEmployee("Kaveh", 5, 18, 1);
            
-           employeeEditor.EmployeeEdited += messageService.onEmployeeEdited;
-            employees[1] = employeeEditor.EditEmployee(EmployeeToEdit, "Esme Hamijoori", 11, 5);
+             employees.Clear();
+            employees = xmlManager.RetrieveEmployeeFromXML();
+
 
             reporter.SortByName(employees);
             Console.WriteLine("======================================================================");
