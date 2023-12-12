@@ -100,7 +100,7 @@ namespace EmployeeManagementSystem
 
         public void UpdateEmployee(string employeeName, int experience, decimal salaryPerHour,int type)
         {
-            Console.WriteLine("Employee is being Updated");
+            Console.Write($"Employee {employeeName} is being Updated");
 
             XDocument doc = XDocument.Load(Path.Combine("../../../", "Employees.xml"));
 
@@ -125,7 +125,7 @@ namespace EmployeeManagementSystem
                 Thread.Sleep(500);
                 Console.Write(".");
                 Thread.Sleep(500);
-                Console.Write(".");
+                Console.WriteLine(".");
 
                 OnEmployeeEdited();
             }

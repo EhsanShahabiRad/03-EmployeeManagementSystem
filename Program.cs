@@ -7,20 +7,20 @@ namespace EmployeeManagementSystem
         {
             XmlManager xmlManager = new XmlManager();
             xmlManager.GenerateXML();
-         
-
             List<IEmployee> employees = xmlManager.RetrieveEmployeeFromXML();
-           
-
             ReportEmployee reporter = new ReportEmployee();
 
+            Console.WriteLine("Sorting Employees By Name:");
             reporter.SortByName(employees);
             Console.WriteLine("======================================================================");
 
+            Console.WriteLine("Sorting Employees By Name Descending:");
             reporter.SortByNameDescending(employees);
             Console.WriteLine("======================================================================");
 
+            Console.WriteLine("Filter Employees by Salary");
             reporter.FilterSalaryBelow(employees, 1000);
+            
             reporter.FilterSalaryAbove(employees, 1000);
             Console.WriteLine("======================================================================");
 
@@ -43,7 +43,7 @@ namespace EmployeeManagementSystem
             Console.WriteLine("======================================================================");
 
 
-
+            Console.ReadKey();
 
         }
     }
