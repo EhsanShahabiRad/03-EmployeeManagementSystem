@@ -17,8 +17,6 @@ namespace EmployeeManagementSystem
         decimal CalculateSalary();
        
         void DisplayDetails();
-
-        
         
         
     }
